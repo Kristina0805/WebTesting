@@ -47,7 +47,7 @@ public class RequestTest {
         elements.get(1).sendKeys("+79227280798");
         driver.findElement(By.className("checkbox__box")).click();
         driver.findElement(By.className("button_view_extra")).click();
-        String text = driver.findElement(By.className("paragraph paragraph_theme_alfa-on-white")).getText();
+        String text = driver.findElement(By.cssSelector("[data-test-id='order-success']")).getText();
         Assertions.assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", text.trim());
 
     }
